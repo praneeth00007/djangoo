@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Schedule</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            background: linear-gradient(to right, #d3d3d3, #505050); /* Light Grey to Dark Grey */
+            font-family: Arial, sans-serif;
+            color: black;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn {
+            background-color: black; /* Black background */
+            color: white; /* White text */
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #333; /* Slightly lighter black on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Class Schedule</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Class</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        <li><a href="{% url 'video_conference' class_name='example_class' %}">Video Conference</a></li>
+            <!-- Update the links to use Django URL patterns -->
+            <tr>
+                <td>Monday</td>
+                <td>10:00 AM - 11:00 AM</td>
+                <td>German</td>
+                <td><a href="{% url 'video_conference' class_name='german' %}" class="btn">Conduct Session</a></td>
+
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>1:00 PM - 2:00 PM</td>
+                <td>English</td>
+                <td><a href="{% url 'video_conference' class_name='english' %}" class="btn">Conduct Session</a></td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>3:00 PM - 4:00 PM</td>
+                <td>Spanish</td>
+                <td><a href="{% url 'video_conference' class_name='spanish' %}" class="btn">Conduct Session</a></td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>2:00 PM - 3:00 PM</td>
+                <td>Italian</td>
+                <td><a href="{% url 'video_conference' class_name='italian' %}" class="btn">Conduct Session</a></td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>11:00 AM - 12:00 PM</td>
+                <td>French</td>
+                <td><a href="{% url 'video_conference' class_name='french' %}" class="btn">Conduct Session</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

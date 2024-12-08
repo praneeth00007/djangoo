@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Learn English Online with Chatterwave?</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+            color: #333;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .english-section, .resources-section, .faq-section, .english-learning {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .english-section h2, .resources-section h2, .faq-section h3 {
+            text-align: center;
+        }
+
+        .benefits-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .english-benefit {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 32%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .english-benefit img {
+            width: 300px;
+            height: 300px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .download-button {
+            background-color: #ff4081;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .flag-icon {
+            width: 20px;
+            height: auto;
+            margin-left: 5px;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            color: #0073e6;
+            font-size: 18px;
+            margin: 10px 0;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+            margin-left: 20px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .faq.open .faq-answer {
+            max-height: 200px; /* Adjust as needed */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        footer a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .benefits-container {
+                display: block;
+            }
+            .english-benefit {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="english-section">
+            <h2>Why Learn English Online with Chatterwave?</h2>
+            <div class="benefits-container">
+                <div class="english-benefit">
+                    <h3>Comfortable Speaking from Day 1</h3>
+                    <img src="https://www.lingoda.com/wp-content/uploads/2021/10/teacher-hero-image-desktop-1.png" loading="lazy" alt="Speaking Image">
+                    <p>Build your confidence and learn to express yourself easily through conversation, light debate, and role-playing.</p>
+                </div>
+                <div class="english-benefit">
+                    <h3>Teachers from All Over the World</h3>
+                    <img src="https://www.lingoda.com/wp-content/uploads/2024/03/2024-english-section-why-3-m.png" loading="lazy" alt="Teachers Image">
+                    <p>Through our rotation of international teachers, you’ll be exposed to a wide variety of accents, expressions, and cultures.</p>
+                </div>
+                <div class="english-benefit">
+                    <h3>Learning Beyond the Lesson</h3>
+                    <img src="https://www.lingoda.com/wp-content/uploads/2024/03/2024-english-section-why-2-m.png" loading="lazy" alt="Learning Image">
+                    <p>Prepare before class or revise what you’ve just learned by quickly accessing the class materials, exercises, and quizzes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="resources-section">
+            <h2>Download Learning Materials</h2>
+            <a href="http://127.0.0.1:8000/static/downloads/ENGLISH.pdf" class="download-button" download>Download English Lessons</a>
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English Flag" class="flag-icon">
+        </div>
+
+        <div class="faq-section">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq">
+                <div class="faq-question">What is the best way to learn English?</div>
+                <div class="faq-answer">The best way to learn English is to practice speaking and listening regularly...</div>
+            </div>
+            <div class="faq">
+                <div class="faq-question">How long does it take to learn English?</div>
+                <div class="faq-answer">The time it takes to learn English varies based on individual commitment...</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Chatterwave. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const parent = question.parentElement;
+                parent.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
